@@ -5,8 +5,12 @@ export default function Home() {
   return (
     <main>
       <Landing />
-      <About />
-      <Projects />
+      {/* <div id="about">
+        <About />
+      </div> */}
+      <div id="projects">
+        <Projects />
+      </div>
     </main>
   );
 }

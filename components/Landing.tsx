@@ -15,7 +15,7 @@ const Landing = () => {
       <div className="py-28 pl-48 flex flex-col gap-14">
         <div className="relative">
           <h2
-            className={` absolute -top-16 -left-6 text-violet-700 text-4xl leading-7 ${caveat.className} transform origin-center -rotate-12`}
+            className={`${caveat.className} absolute -top-16 -left-6 text-violet-700 text-4xl leading-7 transform origin-center -rotate-12`}
           >
             Hey, I’m <span className="block">Rishabh Singh</span>
           </h2>
