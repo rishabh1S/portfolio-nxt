@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+html {
   @apply overflow-x-hidden;
   margin: 0;
   padding: 0;
@@ -23,7 +23,12 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: transparent;
+  background-color: #E8E6DC;
+  border-radius: 3px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background-color: #141414;
   border-radius: 3px;
 }
 

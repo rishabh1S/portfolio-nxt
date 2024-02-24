@@ -1,10 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Montserrat } from "next/font/google";
 import { MdArrowOutward } from "react-icons/md";
-
-const montserrat = Montserrat({ subsets: ["latin"] });
 
 interface ProjectCardProps {
   number: string;
@@ -28,9 +25,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <div className={`max-w-4xl flex ${isAlternate ? "ml-auto" : "mr-auto"}`}>
       <div className="relative">
-        <h1
-          className={`${montserrat.className} text-xl font-bold leading-4 text-violet-700`}
-        >
+        <h1 className="text-xl font-bold leading-4 text-violet-700">
           {number}
         </h1>
         <div className="absolute top-7 left-2.5 h-24 border-l-[1.5px] border-solid border-violet-700" />
@@ -42,7 +37,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             alt="Project card"
             width={800}
             height={600}
-            className="aspect-video transition-all !duration-700 !delay-300 transform hover:scale-95 hover:opacity-55"
+            className="transition-all !duration-700 !delay-300 transform hover:scale-95 hover:opacity-55"
           />
         </Link>
         <div className="flex flex-col gap-2.5">

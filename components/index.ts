@@ -3,5 +3,6 @@ import Sidebar from "./Sidebar";
 import About from "./About";
 import Landing from "./Landing";
 import Projects from "./Projects";
+import ProjectItem from "./ProjectItem";
 
-export { About, Landing, ProjectCard, Projects, Sidebar };
+export { About, Landing, ProjectCard, Projects, Sidebar, ProjectItem };

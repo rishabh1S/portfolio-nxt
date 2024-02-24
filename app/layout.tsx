@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./provider";
 import { Sidebar } from "@/components";
 
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Rishabh Singh",
@@ -18,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-[#E8E6DC] dark:bg-[#141414]`}>
+      <body
+        className={`${montserrat.className} bg-[#E8E6DC] dark:bg-[#141414]`}
+      >
         <Providers>
           <Sidebar />
           {children}
