@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.className} bg-[#E8E6DC] dark:bg-[#141414]`}
+        className={`${montserrat.className} bg-[#F8EEEC] dark:bg-[#141414]`}
       >
         <Providers>
           <CustomCursor />

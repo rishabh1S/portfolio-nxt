@@ -31,7 +31,7 @@ const Projects = () => {
           <div className="relative group">
             <button
               onClick={() => router.push("/projects")}
-              className="relative z-10 px-3 uppercase text-center tracking-tight bg-[#E8E6DC] dark:bg-[#141414]"
+              className="relative z-10 px-3 uppercase text-center tracking-tight bg-[#F8EEEC] dark:bg-[#141414]"
             >
               View All Projects
             </button>

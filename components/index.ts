@@ -1,21 +1,25 @@
 import About from "./About";
+import Contact from "./Contact";
 import CustomCursor from "./CustomCursor";
+import Input from "./Input";
 import Landing from "./Landing";
 import Messages from "./Messages";
 import ProjectCard from "./ProjectCard";
 import ProjectItem from "./ProjectItem";
 import Projects from "./Projects";
 import Sidebar from "./Sidebar";
-import Input from "./Input";
+import Footer from "./Footer";
 
 export {
   About,
+  Contact,
   CustomCursor,
+  Input,
   Landing,
   Messages,
   ProjectCard,
   ProjectItem,
   Projects,
   Sidebar,
-  Input,
+  Footer,
 };
