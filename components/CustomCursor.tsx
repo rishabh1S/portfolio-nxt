@@ -36,11 +36,11 @@ const CustomCursor = () => {
     <>
       <div
         ref={cursorDotRef}
-        className="w-2 h-2 bg-zinc-400 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full z-10 pointer-events-none"
+        className="w-2 h-2 bg-zinc-400 fixed z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none"
       />
       <div
         ref={cursorOutlineRef}
-        className="w-24 h-24 border border-zinc-400 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full z-10 pointer-events-none"
+        className="w-24 h-24 border border-zinc-400 fixed z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none"
       />
     </>
   );

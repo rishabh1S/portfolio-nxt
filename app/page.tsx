@@ -5,9 +5,9 @@ export default function Home() {
   return (
     <main>
       <Landing />
-      {/* <div id="about">
+      <div id="about">
         <About />
-      </div> */}
+      </div>
       <div id="projects">
         <Projects />
       </div>
