@@ -28,7 +28,9 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
       onMouseLeave={() => setIsVisible(false)}
     >
       <div className="flex justify-between items-center px-4">
-        <h1 className="text-4xl font-bold tracking-tighter">{title}</h1>
+        <h1 className="text-4xl font-bold tracking-tighter hover:text-violet-700">
+          {title}
+        </h1>
         <h3 className="text-neutral-600 dark:text-neutral-400">{techstack}</h3>
       </div>
       {isVisible && (
@@ -45,7 +47,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
               alt="Project card"
               width={450}
               height={300}
-              className="hover:scale-105"
+              className="transition duration-300 transform hover:scale-105"
             />
           </Link>
         </div>
