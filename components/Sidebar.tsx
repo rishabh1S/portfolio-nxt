@@ -1,18 +1,21 @@
 "use client";
 
+import { useTheme } from "next-themes";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import { MdOutlineChat } from "react-icons/md";
+import { useEffect, useState } from "react";
+import { FaMoon } from "react-icons/fa";
 import { GrProjects } from "react-icons/gr";
 import { HiOutlineHome } from "react-icons/hi2";
-import { SiAboutdotme } from "react-icons/si";
-import { FaMoon } from "react-icons/fa";
-import { MdSunny } from "react-icons/md";
-import { useTheme } from "next-themes";
+import { MdOutlineChat, MdSunny } from "react-icons/md";
+import { SiAboutdotme, SiBloglovin } from "react-icons/si";
+import { Howl } from "howler";
 
 const Sidebar = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+  const sound = new Howl({
+    src: ["click.mp3"],
+  });
 
   useEffect(() => {
     setMounted(true);
@@ -51,9 +54,18 @@ const Sidebar = () => {
         >
           <GrProjects size={28} />
         </Link>
+        <Link
+          className="flex items-center justify-center w-12 h-12 rounded hover:text-violet-700"
+          href="/#blogs"
+        >
+          <SiBloglovin size={28} />
+        </Link>
         <button
           className="flex items-center justify-center w-12 h-12 rounded"
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          onClick={() => {
+            setTheme(theme === "dark" ? "light" : "dark");
+            sound.play();
+          }}
         >
           {theme === "dark" ? <FaMoon size={28} /> : <MdSunny size={28} />}
         </button>

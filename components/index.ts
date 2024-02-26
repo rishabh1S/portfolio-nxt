@@ -9,6 +9,7 @@ import ProjectItem from "./ProjectItem";
 import Projects from "./Projects";
 import Sidebar from "./Sidebar";
 import Footer from "./Footer";
+import Blogs from "./Blogs";
 
 export {
   About,
@@ -22,4 +23,5 @@ export {
   Projects,
   Sidebar,
   Footer,
+  Blogs,
 };

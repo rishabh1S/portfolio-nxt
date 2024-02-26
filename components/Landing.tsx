@@ -4,6 +4,7 @@ import React from "react";
 import { Caveat } from "next/font/google";
 import { HiArrowLongRight } from "react-icons/hi2";
 import { useRouter } from "next/navigation";
+import { WavyBackground } from "./ui";
 
 const caveat = Caveat({ subsets: ["latin"] });
 
@@ -11,6 +12,7 @@ const Landing = () => {
   const router = useRouter();
   return (
     <div className="min-h-screen">
+      <WavyBackground />
       <div className="py-28 pl-48 flex flex-col gap-14">
         <div className="relative">
           <h2

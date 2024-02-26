@@ -1,4 +1,4 @@
-import { About, Contact, Footer, Landing, Projects } from "@/components";
+import { About, Blogs, Contact, Footer, Landing, Projects } from "@/components";
 import React from "react";
 
 export default function Home() {
@@ -10,6 +10,9 @@ export default function Home() {
       </div>
       <div id="projects">
         <Projects />
+      </div>
+      <div id="blogs">
+        <Blogs />
       </div>
       <Contact />
       <Footer />
