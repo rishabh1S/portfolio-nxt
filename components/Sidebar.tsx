@@ -9,6 +9,7 @@ import { HiOutlineHome } from "react-icons/hi2";
 import { MdOutlineChat, MdSunny } from "react-icons/md";
 import { SiAboutdotme } from "react-icons/si";
 import { Howl } from "howler";
+import { SocialIcons } from "@/utils/socials";
 
 const Sidebar = () => {
   const [mounted, setMounted] = useState(false);
@@ -64,13 +65,26 @@ const Sidebar = () => {
           {theme === "dark" ? <FaMoon size={28} /> : <MdSunny size={28} />}
         </button>
       </div>
-      <div className="flex flex-col items-center mt-auto mb-2 border-t border-zinc-300 dark:border-zinc-700">
-        <Link
-          className="flex items-center justify-center w-12 h-12 mt-2 rounded hover:text-violet-700"
-          href="/contact"
-        >
-          <MdOutlineChat size={28} />
-        </Link>
+
+      <div className="mt-auto mb-2 flex flex-col gap-4 items-center">
+        {SocialIcons.slice(0, 3).map((SocialIcon, index) => (
+          <Link
+            key={index}
+            href={SocialIcon.link}
+            target="_blank"
+            className="flex items-center justify-center w-12 h-12 transition-all transform hover:scale-125 hover:text-violet-700"
+          >
+            <SocialIcon.icon size={28} />
+          </Link>
+        ))}
+        <div className="border-t border-zinc-300 dark:border-zinc-700">
+          <Link
+            className="flex items-center justify-center w-12 h-12 mt-2 rounded hover:text-violet-700"
+            href="/contact"
+          >
+            <MdOutlineChat size={28} />
+          </Link>
+        </div>
       </div>
     </div>
   );

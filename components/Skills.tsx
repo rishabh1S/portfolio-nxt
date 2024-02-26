@@ -51,11 +51,34 @@ const Skill: React.FC<{
   );
 };
 
+const SkillSection: React.FC<{
+  title: string;
+  skills: { Icon?: React.ElementType; name: string; logo?: string }[];
+}> = ({ title, skills }) => {
+  return (
+    <div className="flex flex-col gap-3">
+      <h1 className="text-sm tracking-tight text-zinc-600 dark:text-zinc-400">
+        {title}
+      </h1>
+      <div className="flex gap-4">
+        {skills.map((skill, index) => (
+          <Skill
+            key={index}
+            Icon={skill.Icon}
+            logo={skill.logo}
+            name={skill.name}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const Skills = () => {
   return (
     <div className="min-h-screen">
-      <div className="pt-32 px-4">
-        <div className="flex flex-col gap-4">
+      <div className="pt-16 px-4">
+        <div className="flex flex-col gap-4 py-4">
           <h1 className="text-6xl font-medium tracking-tighter">Tech Stack</h1>
           <h2 className="text-xl w-3/4">
             Embracing the inevitability of change, I consistently delve into
@@ -65,64 +88,64 @@ const Skills = () => {
           </h2>
         </div>
         <div className="flex flex-col gap-4 pt-4">
-          <div className="flex flex-col gap-4">
-            <h1 className="text-sm tracking-tight">Mobile Development</h1>
-            <div className="flex gap-4">
-              <Skill Icon={TbBrandReactNative} name="React native" />
-              <Skill Icon={SiExpo} name="Expo" />
-            </div>
-          </div>
-          <div className="flex flex-col gap-4">
-            <h1 className="text-sm tracking-tight">Frontend Web Development</h1>
-            <div className="flex gap-4">
-              <Skill Icon={SiHtml5} name="HTML" />
-              <Skill Icon={SiCss3} name="CSS" />
-              <Skill Icon={SiJavascript} name="Javascript" />
-              <Skill Icon={SiTypescript} name="Typescript" />
-              <Skill Icon={SiReact} name="React" />
-              <Skill Icon={SiNextdotjs} name="Next.js" />
-              <Skill Icon={SiAngular} name="Angular" />
-            </div>
-          </div>
-          <div className="flex flex-col gap-4">
-            <h1 className="text-sm tracking-tight">UI Libraries</h1>
-            <div className="flex gap-4">
-              <Skill Icon={SiTailwindcss} name="Tailwind CSS" />
-              <Skill Icon={SiBootstrap} name="Bootstrap" />
-              <Skill Icon={SiNextui} name="NextUI" />
-              <Skill logo="/tamagui.jpg" name="Tamagui.dev" />
-            </div>
-          </div>
-          <div className="flex flex-col gap-4">
-            <h1 className="text-sm tracking-tight">Backend</h1>
-            <div className="flex gap-4">
-              <Skill Icon={SiNodedotjs} name="Node.js" />
-              <Skill Icon={SiExpress} name="Express.js" />
-              <Skill Icon={FaJava} name="Java" />
-              <Skill Icon={SiPython} name="Python" />
-              <Skill Icon={TbApi} name="Rest APIs" />
-              <Skill Icon={SiGraphql} name="GraphQl" />
-            </div>
-          </div>
-          <div className="flex flex-col gap-4">
-            <h1 className="text-sm tracking-tight">Databases</h1>
-            <div className="flex gap-4">
-              <Skill Icon={SiMongodb} name="Mongo DB" />
-              <Skill Icon={SiMysql} name="My SQL" />
-              <Skill Icon={SiFirebase} name="Firebase" />
-              <Skill Icon={SiSupabase} name="Supabase" />
-            </div>
-          </div>
-          <div className="flex flex-col gap-4">
-            <h1 className="text-sm tracking-tight">Other Tools</h1>
-            <div className="flex gap-4">
-              <Skill Icon={SiGithub} name="Github" />
-              <Skill Icon={SiStrapi} name="Strapi" />
-              <Skill Icon={SiStripe} name="Stripe" />
-              <Skill Icon={SiFigma} name="Figma" />
-              <Skill Icon={SiPostman} name="Postman" />
-            </div>
-          </div>
+          <SkillSection
+            title="Mobile Development"
+            skills={[
+              { Icon: TbBrandReactNative, name: "React native" },
+              { Icon: SiExpo, name: "Expo" },
+            ]}
+          />
+          <SkillSection
+            title="Frontend Web Development"
+            skills={[
+              { Icon: SiHtml5, name: "HTML" },
+              { Icon: SiCss3, name: "CSS" },
+              { Icon: SiJavascript, name: "Javascript" },
+              { Icon: SiTypescript, name: "Typescript" },
+              { Icon: SiReact, name: "React" },
+              { Icon: SiNextdotjs, name: "Next.js" },
+              { Icon: SiAngular, name: "Angular" },
+            ]}
+          />
+          <SkillSection
+            title="UI Libraries"
+            skills={[
+              { Icon: SiTailwindcss, name: "Tailwind CSS" },
+              { Icon: SiBootstrap, name: "Bootstrap" },
+              { Icon: SiNextui, name: "NextUI" },
+              { logo: "/tamagui.jpg", name: "Tamagui.dev" },
+            ]}
+          />
+          <SkillSection
+            title="Backend"
+            skills={[
+              { Icon: SiNodedotjs, name: "Node.js" },
+              { Icon: SiExpress, name: "Express.js" },
+              { Icon: FaJava, name: "Java" },
+              { Icon: SiPython, name: "Python" },
+              { Icon: TbApi, name: "Rest APIs" },
+              { Icon: SiGraphql, name: "GraphQl" },
+            ]}
+          />
+          <SkillSection
+            title="Databases"
+            skills={[
+              { Icon: SiMongodb, name: "Mongo DB" },
+              { Icon: SiMysql, name: "My SQL" },
+              { Icon: SiFirebase, name: "Firebase" },
+              { Icon: SiSupabase, name: "Supabase" },
+            ]}
+          />
+          <SkillSection
+            title="Databases"
+            skills={[
+              { Icon: SiGithub, name: "Github" },
+              { Icon: SiStrapi, name: "Strapi" },
+              { Icon: SiStripe, name: "Stripe" },
+              { Icon: SiFigma, name: "Figma" },
+              { Icon: SiPostman, name: "Postman" },
+            ]}
+          />
         </div>
       </div>
     </div>

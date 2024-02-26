@@ -1,7 +1,12 @@
+"use client";
+
 import React from "react";
 import { Skills } from ".";
+import { useRouter } from "next/navigation";
+import { MdArrowOutward } from "react-icons/md";
 
 const About = () => {
+  const router = useRouter();
   return (
     <div className="min-h-screen">
       <div className="py-20 px-48">
@@ -30,6 +35,15 @@ const About = () => {
               and pop music.
             </h2>
           </div>
+          <button
+            onClick={() => router.push("/resume")}
+            className="flex self-end gap-3 items-center w-fit h-fit py-4 px-6 rounded-full border border-black dark:border-white hover:bg-black/[0.2] dark:hover:bg-white/[0.2] transition-all ease-in-out"
+          >
+            <h1 className="text-2xl tracking-tighter uppercase">
+              Grab my Resume
+            </h1>
+            <MdArrowOutward size={28} />
+          </button>
         </div>
         <Skills />
       </div>

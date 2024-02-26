@@ -9,7 +9,7 @@ const Projects = () => {
   const router = useRouter();
   return (
     <div className="min-h-screen">
-      <div className="py-20 pl-48">
+      <div className="py-16 pl-48">
         <h1 className="text-6xl font-medium tracking-tighter px-4">
           My latest projects.
         </h1>

@@ -2,9 +2,9 @@
 
 import React from "react";
 import { Caveat } from "next/font/google";
-import { HiArrowLongRight } from "react-icons/hi2";
 import { useRouter } from "next/navigation";
 import { WavyBackground } from "./ui";
+import { MdArrowOutward } from "react-icons/md";
 
 const caveat = Caveat({ subsets: ["latin"] });
 
@@ -27,10 +27,12 @@ const Landing = () => {
         <div className="flex justify-between">
           <button
             onClick={() => router.push("/contact")}
-            className="flex self-end gap-3 items-center w-fit h-fit text-2xl tracking-tighter py-4 px-6 rounded-full border border-black dark:border-white uppercase hover:bg-black/[0.2] dark:hover:bg-white/[0.2] transition-all ease-in-out"
+            className="flex self-end gap-3 items-center w-fit h-fit py-4 px-6 rounded-full border border-black dark:border-white uppercase hover:bg-black/[0.2] dark:hover:bg-white/[0.2] transition-all ease-in-out"
           >
-            <h1>Let’s connect</h1>
-            <HiArrowLongRight />
+            <h1 className="text-2xl tracking-tighter uppercase">
+              Let’s connect
+            </h1>
+            <MdArrowOutward size={28} />
           </button>
           <h2 className="uppercase px-3 max-w-md">
             Crafting digital solutions with expertise in full stack Mern and
