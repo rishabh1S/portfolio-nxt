@@ -8,8 +8,8 @@ import ProjectCard from "./ProjectCard";
 import ProjectItem from "./ProjectItem";
 import Projects from "./Projects";
 import Sidebar from "./Sidebar";
+import Skills from "./Skills";
 import Footer from "./Footer";
-import Blogs from "./Blogs";
 
 export {
   About,
@@ -21,7 +21,7 @@ export {
   ProjectCard,
   ProjectItem,
   Projects,
+  Skills,
   Sidebar,
   Footer,
-  Blogs,
 };

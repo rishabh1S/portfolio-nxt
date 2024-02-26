@@ -7,7 +7,7 @@ import { FaMoon } from "react-icons/fa";
 import { GrProjects } from "react-icons/gr";
 import { HiOutlineHome } from "react-icons/hi2";
 import { MdOutlineChat, MdSunny } from "react-icons/md";
-import { SiAboutdotme, SiBloglovin } from "react-icons/si";
+import { SiAboutdotme } from "react-icons/si";
 import { Howl } from "howler";
 
 const Sidebar = () => {
@@ -53,12 +53,6 @@ const Sidebar = () => {
           href="/#projects"
         >
           <GrProjects size={28} />
-        </Link>
-        <Link
-          className="flex items-center justify-center w-12 h-12 rounded hover:text-violet-700"
-          href="/#blogs"
-        >
-          <SiBloglovin size={28} />
         </Link>
         <button
           className="flex items-center justify-center w-12 h-12 rounded"
