@@ -12,7 +12,7 @@ const About = () => {
       <div className="py-20 px-48">
         <div className="flex flex-col gap-20">
           <h1 className="text-7xl font-medium tracking-tighter px-4">
-            Every great design begins with an even better story
+            ‘Every great design begins with an even better story’
           </h1>
           <div className="w-4/5 self-end text-xl flex flex-col gap-3 text-justify">
             <h2>

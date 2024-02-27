@@ -3,8 +3,8 @@ import { FiLinkedin, FiGithub, FiInstagram, FiDribbble } from "react-icons/fi";
 import { SiLeetcode } from "react-icons/si";
 
 export const SocialIcons = [
-  { icon: FiLinkedin, link: "https://www.linkedin.com/in/rishabh1s" },
   { icon: FiGithub, link: "https://github.com/rishabh1S" },
+  { icon: FiLinkedin, link: "https://www.linkedin.com/in/rishabh1s" },
   { icon: FaXTwitter, link: "https://twitter.com/Rishabh1xs" },
   { icon: FiDribbble, link: "https://dribbble.com/rishabh1s" },
   { icon: SiLeetcode, link: "https://leetcode.com/Rishabh1S" },

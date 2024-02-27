@@ -10,8 +10,8 @@ const Projects = () => {
   return (
     <div className="min-h-screen">
       <div className="py-16 pl-48">
-        <h1 className="text-6xl font-medium tracking-tighter px-4">
-          My latest projects.
+        <h1 className="text-7xl font-medium tracking-tighter px-4">
+          My latest projects
         </h1>
         <div className="py-14 flex flex-col gap-20">
           {projectsData.slice(0, 5).map((project, index) => (

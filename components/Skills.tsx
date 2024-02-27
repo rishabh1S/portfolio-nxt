@@ -28,6 +28,7 @@ import {
   SiTypescript,
 } from "react-icons/si";
 import { TbApi, TbBrandReactNative } from "react-icons/tb";
+import { Button } from "./ui";
 
 const Skill: React.FC<{
   Icon?: React.ElementType;
@@ -35,8 +36,11 @@ const Skill: React.FC<{
   name: string;
 }> = ({ Icon, logo, name }) => {
   return (
-    <div className="py-2 px-3 flex gap-2 items-center bg-violet-400 dark:bg-violet-600 transition-all ease-in-out hover:bg-violet-500 hover:scale-110 rounded-xl">
-      <h2 className="font-medium tracking-tighter">{name}</h2>
+    <Button
+      borderRadius="1.75rem"
+      className="bg-white dark:bg-slate-900 border-neutral-200 dark:border-slate-800"
+    >
+      <h2 className="font-medium text-sm tracking-tighter">{name}</h2>
       {Icon && <Icon size={22} />}
       {logo && (
         <Image
@@ -47,7 +51,7 @@ const Skill: React.FC<{
           className="rounded-md"
         />
       )}
-    </div>
+    </Button>
   );
 };
 
@@ -79,7 +83,7 @@ const Skills = () => {
     <div className="min-h-screen">
       <div className="pt-16 px-4">
         <div className="flex flex-col gap-4 py-4">
-          <h1 className="text-6xl font-medium tracking-tighter">Tech Stack</h1>
+          <h1 className="text-7xl font-medium tracking-tighter">Tech Stack</h1>
           <h2 className="text-xl w-3/4">
             Embracing the inevitability of change, I consistently delve into
             emerging technologies, acquire a foundational understanding, and
@@ -137,7 +141,7 @@ const Skills = () => {
             ]}
           />
           <SkillSection
-            title="Databases"
+            title="Other Tools"
             skills={[
               { Icon: SiGithub, name: "Github" },
               { Icon: SiStrapi, name: "Strapi" },

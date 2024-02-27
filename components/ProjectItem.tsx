@@ -37,7 +37,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
         <div className="flex flex-row-reverse gap-6 absolute bottom-0 right-0 px-4">
           <Link
             href={sourceCode}
-            className="p-4 h-fit self-end rounded-full border hover:bg-black/[0.2] dark:hover:bg-white/[0.2]"
+            className="p-4 h-fit self-end rounded-full border hover:bg-black/[0.2] dark:hover:bg-white/[0.2] transition-all ease-in-out"
           >
             <MdArrowOutward size={32} />
           </Link>
