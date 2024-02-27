@@ -3,7 +3,7 @@ import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.share
 import { SetStateAction } from "react";
 
 const questions = [
-  "Hi there! To get started, could you tell me your first name?",
+  "Hi there! To get started, could you tell me your full name?",
   `Nice to meet you! Could you share your email address?`,
   `Great, Leave any message you want to convey?`,
 ];

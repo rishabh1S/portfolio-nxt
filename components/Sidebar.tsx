@@ -56,7 +56,7 @@ const Sidebar = () => {
           <GrProjects size={28} />
         </Link>
         <button
-          className="flex items-center justify-center w-12 h-12 rounded"
+          className="flex -rotate-12 items-center justify-center w-12 h-12 rounded"
           onClick={() => {
             setTheme(theme === "dark" ? "light" : "dark");
             sound.play();

@@ -1,12 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
-import Link from "next/link";
+import dynamic from "next/dynamic";
 import Image from "next/image";
+import Link from "next/link";
+import React, { useState } from "react";
 import { MdArrowOutward } from "react-icons/md";
-import ReactPlayer from "react-player";
-import { VideoPlayer } from ".";
-
+const VideoPlayer = dynamic(() => import("./VideoPlayer"), {
+  ssr: false,
+});
 interface ProjectItemProps {
   title: string;
   imageSrc: string;

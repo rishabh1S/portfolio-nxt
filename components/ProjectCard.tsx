@@ -1,11 +1,11 @@
-"use client";
-
-import React from "react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 import { MdArrowOutward } from "react-icons/md";
-import ReactPlayer from "react-player";
-import { VideoPlayer } from ".";
+const VideoPlayer = dynamic(() => import("./VideoPlayer"), {
+  ssr: false,
+});
 
 interface ProjectCardProps {
   number: string;

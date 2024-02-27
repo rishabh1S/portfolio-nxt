@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./provider";
-import { Sidebar, CustomCursor } from "@/components";
+import { CustomCursor, Header, Footer } from "@/components";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -23,8 +23,9 @@ export default function RootLayout({
       >
         <Providers>
           <CustomCursor />
-          <Sidebar />
+          <Header />
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>
