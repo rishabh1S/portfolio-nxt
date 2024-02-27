@@ -18,6 +18,7 @@ export default function Projects() {
               key={project.number}
               title={project.title}
               imageSrc={project.imageSrc}
+              videoUrl={project.videoUrl}
               projectLink={project.projectLink}
               techstack={project.techstack}
               sourceCode={project.sourceCode}

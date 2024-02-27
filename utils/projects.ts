@@ -4,6 +4,8 @@ export const projectsData = [
     title: "Muvo",
     imageSrc:
       "https://res.cloudinary.com/dnp36kqdc/image/upload/v1705152988/CDN%20for%20portfolio/Muvo.png",
+    videoUrl:
+      "https://res.cloudinary.com/dnp36kqdc/video/upload/v1709037310/CDN%20for%20portfolio/muvo_1_m4rjyc.mp4",
     projectLink: "https://muvotv.vercel.app",
     description:
       "Experience endless entertainment with our Netflix clone. Stream movies and TV shows seamlessly on any device, anywhere.",
@@ -16,6 +18,8 @@ export const projectsData = [
     title: "Nexly",
     imageSrc:
       "https://res.cloudinary.com/dnp36kqdc/image/upload/v1708551058/CDN%20for%20portfolio/Nexly.png",
+    videoUrl:
+      "https://res.cloudinary.com/dnp36kqdc/video/upload/v1709034462/CDN%20for%20portfolio/Nexly_demo.mp4",
     projectLink: "https://nexlyhub.vercel.app",
     description:
       "Redefining the way you shop online, offering a personalized and sustainable E-commerce experience.",

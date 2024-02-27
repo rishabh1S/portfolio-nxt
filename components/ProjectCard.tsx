@@ -1,11 +1,16 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { MdArrowOutward } from "react-icons/md";
+import ReactPlayer from "react-player";
+import { VideoPlayer } from ".";
 
 interface ProjectCardProps {
   number: string;
   imageSrc: string;
+  videoUrl?: string;
   projectLink: string;
   description: string;
   techstack: string;
@@ -16,6 +21,7 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({
   number,
   imageSrc,
+  videoUrl,
   projectLink,
   description,
   techstack,
@@ -32,13 +38,22 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       </div>
       <div className="px-4 flex flex-col gap-6">
         <Link href={projectLink} target="_blank" className="relative">
-          <Image
-            src={imageSrc}
-            alt="Project card"
-            width={800}
-            height={600}
-            className="transition-all !duration-700 !delay-300 transform hover:scale-95 hover:opacity-55"
-          />
+          {videoUrl ? (
+            <VideoPlayer
+              videoUrl={videoUrl}
+              width={800}
+              height={450}
+              className="transition-all !duration-700 !delay-300 transform hover:scale-95 hover:opacity-55"
+            />
+          ) : (
+            <Image
+              src={imageSrc}
+              alt="Project card"
+              width={800}
+              height={600}
+              className="transition-all !duration-700 !delay-300 transform hover:scale-95 hover:opacity-55"
+            />
+          )}
         </Link>
         <div className="flex flex-col gap-2.5">
           <h2 className="text-4xl tracking-tighter font-medium italic hover:text-violet-700">

@@ -4,10 +4,13 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { MdArrowOutward } from "react-icons/md";
+import ReactPlayer from "react-player";
+import { VideoPlayer } from ".";
 
 interface ProjectItemProps {
   title: string;
   imageSrc: string;
+  videoUrl?: string | undefined;
   projectLink: string;
   techstack: string;
   sourceCode: string;
@@ -17,6 +20,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
   title,
   techstack,
   imageSrc,
+  videoUrl,
   projectLink,
   sourceCode,
 }) => {
@@ -42,13 +46,22 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
             <MdArrowOutward size={32} />
           </Link>
           <Link href={projectLink} target="_blank">
-            <Image
-              src={imageSrc}
-              alt="Project card"
-              width={450}
-              height={300}
-              className="transition duration-300 transform hover:scale-105"
-            />
+            {videoUrl ? (
+              <VideoPlayer
+                videoUrl={videoUrl}
+                width={450}
+                height={250}
+                className="transition duration-300 transform hover:scale-105"
+              />
+            ) : (
+              <Image
+                src={imageSrc}
+                alt="Project card"
+                width={450}
+                height={300}
+                className="transition duration-300 transform hover:scale-105"
+              />
+            )}
           </Link>
         </div>
       )}

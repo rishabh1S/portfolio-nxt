@@ -10,6 +10,7 @@ import Projects from "./Projects";
 import Sidebar from "./Sidebar";
 import Skills from "./Skills";
 import Footer from "./Footer";
+import VideoPlayer from "./VideoPlayer";
 
 export {
   About,
@@ -24,4 +25,5 @@ export {
   Skills,
   Sidebar,
   Footer,
+  VideoPlayer,
 };
