@@ -1,3 +1,6 @@
+"use client";
+
+import useMediaQuery from "@/hooks/useMediaQuery";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
@@ -28,21 +31,27 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   sourceCode,
   isAlternate,
 }) => {
+  const isMobile = useMediaQuery(640);
+
   return (
-    <div className={`max-w-4xl flex ${isAlternate ? "ml-auto" : "mr-auto"}`}>
+    <div
+      className={`sm:max-w-4xl flex sm:flex-row flex-col ${
+        isAlternate ? "ml-auto" : "mr-auto"
+      }`}
+    >
       <div className="relative">
         <h1 className="text-xl font-bold leading-4 text-violet-700">
           {number}
         </h1>
-        <div className="absolute top-7 left-2.5 h-24 border-l-[1.5px] border-solid border-violet-700" />
+        <div className="absolute sm:top-7 top-2 sm:left-2.5 left-7 sm:h-24 w-24 border-t-[1.5px] sm:border-t-0 sm:border-l-[1.5px] border-solid border-violet-700" />
       </div>
-      <div className="px-4 flex flex-col gap-6">
+      <div className="sm:px-4 sm:py-0 py-3 flex flex-col gap-6">
         <Link href={projectLink} target="_blank" className="relative">
           {videoUrl ? (
             <VideoPlayer
               videoUrl={videoUrl}
-              width={800}
-              height={450}
+              width={isMobile ? 280 : 800}
+              height={isMobile ? 160 : 450}
               className="transition-all !duration-700 !delay-300 transform hover:scale-95 hover:opacity-55"
             />
           ) : (
@@ -56,16 +65,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           )}
         </Link>
         <div className="flex flex-col gap-2.5">
-          <h2 className="text-4xl tracking-tighter font-medium italic hover:text-violet-700">
+          <h2 className="sm:text-4xl text-xl tracking-tighter font-medium italic hover:text-violet-700">
             {description}
           </h2>
           <div className="flex">
-            <h3 className="self-center text-neutral-600 dark:text-neutral-400 text-xl font-light tracking-tight">
+            <h3 className="self-center text-neutral-600 dark:text-neutral-400 text-sm sm:text-xl font-light tracking-tighter">
               {techstack}
             </h3>
             <Link
               href={sourceCode}
-              className="p-3 ml-3 rounded-full border hover:bg-black/[0.2] dark:hover:bg-white/[0.2]"
+              className="p-3 sm:ml-3 rounded-full border hover:bg-black/[0.2] dark:hover:bg-white/[0.2]"
             >
               <MdArrowOutward size={24} />
             </Link>

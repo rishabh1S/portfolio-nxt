@@ -56,7 +56,7 @@ export function Button({
 
       <div
         className={cn(
-          "backdrop-blur-xl flex items-center gap-3 justify-center py-3 px-4 antialiased",
+          "backdrop-blur-xl flex items-center gap-3 justify-center py-2 px-2 sm:py-3 sm:px-4 antialiased",
           className
         )}
         style={{

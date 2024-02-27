@@ -12,6 +12,7 @@ export default function Home() {
         <Projects />
       </div>
       <Contact />
+      <Footer />
     </main>
   );
 }

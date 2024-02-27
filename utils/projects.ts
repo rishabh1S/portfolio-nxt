@@ -10,7 +10,7 @@ export const projectsData = [
     description:
       "Experience endless entertainment with our Netflix clone. Stream movies and TV shows seamlessly on any device, anywhere.",
     techstack:
-      "Next.js, Typescript, Tailwind CSS, Prisma, NextAuth, TMDB API, Zustand, MongoDB",
+      "Next.js, Typescript, Tailwind CSS, Prisma, NextAuth, TMDB API, Zustand",
     sourceCode: "https://github.com/rishabh1S/muvo",
   },
   {
@@ -45,8 +45,7 @@ export const projectsData = [
     projectLink: "https://flixai-showcase.vercel.app",
     description:
       "A text to image generation app based on the user prompts with multiple options to customize the image.",
-    techstack:
-      "React Native Expo + TS, Tamagui.dev, Node.js, MongoDB, Clerk Auth, Fooocus API",
+    techstack: "RN Expo + TS, tamagui, Node.js, MongoDB, Clerk, Fooocus API",
     sourceCode: "https://github.com/rishabh1S/flixai",
   },
   {
@@ -57,8 +56,7 @@ export const projectsData = [
     projectLink: "https://muvotv.vercel.app/getTheApp",
     description:
       "Experience endless entertainment with our Streaming app. Stream movies and TV shows seamlessly.",
-    techstack:
-      "React Native Expo + TS, Tailwind Css, Firebase, Firestore, TMDB API",
+    techstack: "RN Expo + TS, Tailwind Css, Firebase, Firestore, TMDB API",
     sourceCode: "https://github.com/rishabh1S/muvo-app",
   },
   {

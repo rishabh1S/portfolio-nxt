@@ -27,7 +27,7 @@ const Topbar = () => {
 
   return (
     <>
-      <div className="fixed z-40 w-full h-44 py-3 overflow-hidden border-b border-zinc-300 dark:border-zinc-700 backdrop-blur-2xl">
+      <div className="fixed z-40 h-20 w-screen py-3 overflow-hidden backdrop-blur-2xl">
         <div className="flex items-center justify-between px-5">
           <div
             onClick={() => {
@@ -36,7 +36,7 @@ const Topbar = () => {
             }}
           >
             <svg
-              className="w-36 h-36 fill-current"
+              className="w-12 h-12 fill-current"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill="currentColor"
@@ -46,21 +46,21 @@ const Topbar = () => {
           </div>
           <div className="flex gap-4">
             <button
-              className="flex -rotate-12 items-center justify-center w-36 h-36 rounded"
+              className="flex -rotate-12 items-center justify-center w-10 h-10 rounded"
               onClick={() => {
                 setTheme(theme === "dark" ? "light" : "dark");
                 sound.play();
               }}
             >
-              {theme === "dark" ? <FaMoon size={60} /> : <MdSunny size={60} />}
+              {theme === "dark" ? <FaMoon size={24} /> : <MdSunny size={24} />}
             </button>
             <button
-              className="flex items-center justify-center w-36 h-36 rounded hover:text-violet-700"
+              className="flex items-center justify-center w-10 h-10 rounded hover:text-violet-700"
               onClick={() => {
                 setMenuOpen(!menuOpen);
               }}
             >
-              {menuOpen ? <GrClose size={60} /> : <RxHamburgerMenu size={60} />}
+              {menuOpen ? <GrClose size={24} /> : <RxHamburgerMenu size={24} />}
             </button>
           </div>
         </div>

@@ -11,30 +11,30 @@ const caveat = Caveat({ subsets: ["latin"] });
 const Landing = () => {
   const router = useRouter();
   return (
-    <div className="min-h-screen">
+    <div className="w-screen overflow-hidden">
       <WavyBackground />
-      <div className="py-28 pl-48 flex flex-col gap-14">
+      <div className="pt-44 sm:pt-28 py-16 sm:pl-48 px-4 flex flex-col gap-8 sm:gap-14">
         <div className="relative">
           <h2
-            className={`${caveat.className} absolute -top-16 -left-6 text-violet-700 text-4xl leading-7 transform origin-center -rotate-12`}
+            className={`${caveat.className} absolute -top-20 sm:-top-16 -left-4 sm:-left-6 text-violet-700 text-4xl leading-8 sm:leading-7 transform origin-center -rotate-12`}
           >
             Hey, I’m <span className="block">Rishabh Singh</span>
           </h2>
-          <h1 className="text-[120px] leading-[100px] tracking-tight font-medium">
+          <h1 className="text-5xl sm:text-[120px] sm:leading-[100px] tracking-tight font-medium">
             Full-Stack Explorer Unraveling the Wonders of the Code Universe.
           </h1>
         </div>
-        <div className="flex justify-between">
+        <div className="flex sm:flex-row flex-col-reverse gap-6 justify-between">
           <button
             onClick={() => router.push("/contact")}
-            className="flex self-end gap-3 items-center w-fit h-fit py-4 px-6 rounded-full border border-black dark:border-white uppercase hover:bg-black/[0.2] dark:hover:bg-white/[0.2] transition-all ease-in-out"
+            className="flex sm:self-end gap-3 items-center justify-center sm:w-fit h-fit py-4 px-6 rounded-full border border-black dark:border-white uppercase hover:bg-black/[0.2] dark:hover:bg-white/[0.2] transition-all ease-in-out"
           >
-            <h1 className="text-2xl tracking-tighter uppercase">
+            <h1 className="text-xl sm:text-2xl tracking-tighter uppercase">
               Let’s connect
             </h1>
             <MdArrowOutward size={28} />
           </button>
-          <h2 className="uppercase px-3 max-w-md">
+          <h2 className="uppercase px-3 max-w-md text-sm sm:text-base text-justify">
             Crafting digital solutions with expertise in full stack Mern and
             Mean development, as well as mobile app using React Native, learning
             UI/UX design.

@@ -8,12 +8,12 @@ import { projectsData } from "@/utils/projects";
 const Projects = () => {
   const router = useRouter();
   return (
-    <div className="min-h-screen">
-      <div className="py-16 pl-48">
-        <h1 className="text-7xl font-medium tracking-tighter px-4">
+    <div className="min-h-screen w-screen overflow-hidden">
+      <div className="py-16 sm:pl-48 px-4">
+        <h1 className="sm:text-7xl text-4xl font-medium tracking-tighter">
           My latest projects
         </h1>
-        <div className="py-14 flex flex-col gap-20">
+        <div className="py-8 sm:py-14 flex flex-col gap-10 sm:gap-20">
           {projectsData.slice(0, 5).map((project, index) => (
             <ProjectCard
               key={project.number}

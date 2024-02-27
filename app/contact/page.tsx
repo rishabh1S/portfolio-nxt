@@ -31,6 +31,9 @@ export default function Contact() {
   const { name, email, message } = formData;
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [messages, setMessages] = useState<Message[]>([]);
+  const [placeholderMessage, setPlaceholderMessage] = useState<string>(
+    "Type your message..."
+  );
 
   useEffect(() => {
     setMessages([{ content: questions[currentQuestion], isUser: false }]);
@@ -49,6 +52,11 @@ export default function Contact() {
     const userInputValue = userInputRef.current?.value!;
 
     if (shouldValidateEmail(currentQuestion, userInputValue)) {
+      userInputRef.current!.value = "";
+      setPlaceholderMessage("Wrong Input");
+      setTimeout(() => {
+        setPlaceholderMessage("Type your message...");
+      }, 3000);
       return;
     }
 
@@ -113,16 +121,19 @@ export default function Contact() {
   }, [message, name, email]);
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <div className="flex flex-col items-end py-16 px-48">
-        {messages.map(({ content, isUser }, index) => (
-          <Messages key={index} content={content} isUser={isUser} />
-        ))}
+    <div className="min-h-screen w-screen overflow-hidden">
+      <div className="flex flex-col">
+        <div className="flex flex-col items-end py-16 sm:px-48 px-2">
+          {messages.map(({ content, isUser }, index) => (
+            <Messages key={index} content={content} isUser={isUser} />
+          ))}
+        </div>
+        <Input
+          userInputRef={userInputRef}
+          handleInputAction={handleInputAction}
+          placeholder={placeholderMessage}
+        />
       </div>
-      <Input
-        userInputRef={userInputRef}
-        handleInputAction={handleInputAction}
-      />
     </div>
   );
 }

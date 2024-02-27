@@ -8,15 +8,20 @@ interface InputProps {
       | React.KeyboardEvent<HTMLInputElement>
       | React.MouseEvent<HTMLButtonElement>
   ) => void;
+  placeholder: string;
 }
 
-const Input: React.FC<InputProps> = ({ userInputRef, handleInputAction }) => {
+const Input: React.FC<InputProps> = ({
+  userInputRef,
+  handleInputAction,
+  placeholder,
+}) => {
   return (
-    <div className="pl-20 fixed w-full bottom-0 flex items-center border-t border-zinc-300 dark:border-zinc-700">
+    <div className="sm:pl-20 pl-2 fixed w-full bottom-0 flex items-center border-t border-zinc-300 dark:border-zinc-700">
       <input
         ref={userInputRef}
         type="text"
-        placeholder={"Type your message..."}
+        placeholder={placeholder}
         onKeyDown={handleInputAction}
         className="flex-1 py-5 px-2 bg-transparent backdrop-blur-3xl focus:outline-none"
       />

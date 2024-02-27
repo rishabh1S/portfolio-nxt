@@ -1,5 +1,6 @@
 "use client";
 
+import useMediaQuery from "@/hooks/useMediaQuery";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
@@ -25,23 +26,36 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
   projectLink,
   sourceCode,
 }) => {
+  const isMobile = useMediaQuery(640);
   const [isVisible, setIsVisible] = useState(false);
   return (
     <div
-      className="relative border-b border-zinc-300 dark:border-zinc-700 py-12 pr-2"
-      onMouseEnter={() => setIsVisible(true)}
-      onMouseLeave={() => setIsVisible(false)}
+      className="relative border-b border-zinc-300 dark:border-zinc-700 sm:py-12 py-6 sm:pr-2"
+      onMouseEnter={!isMobile ? () => setIsVisible(true) : undefined}
+      onMouseLeave={!isMobile ? () => setIsVisible(false) : undefined}
     >
-      <div className="flex justify-between items-center px-4">
+      <div className="flex sm:flex-row flex-col justify-between sm:items-center sm:px-4 gap-4">
         <h1 className="text-4xl font-bold tracking-tighter hover:text-violet-700">
           {title}
         </h1>
-        <h3 className="text-neutral-600 dark:text-neutral-400">{techstack}</h3>
+        <h3 className="text-neutral-600 dark:text-neutral-400 sm:text-lg text-sm">
+          {techstack}
+        </h3>
+        {isMobile && (
+          <Link
+            href={sourceCode}
+            target="_blank"
+            className="p-3 w-fit rounded-full border"
+          >
+            <MdArrowOutward size={22} />
+          </Link>
+        )}
       </div>
       {isVisible && (
         <div className="flex flex-row-reverse gap-6 absolute bottom-0 right-0 px-4">
           <Link
             href={sourceCode}
+            target="_blank"
             className="p-4 h-fit self-end rounded-full border hover:bg-black/[0.2] dark:hover:bg-white/[0.2] transition-all ease-in-out"
           >
             <MdArrowOutward size={32} />

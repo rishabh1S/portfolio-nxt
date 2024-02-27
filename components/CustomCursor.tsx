@@ -4,7 +4,7 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 import React, { useEffect, useRef } from "react";
 
 const CustomCursor = () => {
-  const isMobile = useMediaQuery(568);
+  const isMobile = useMediaQuery(640);
   const cursorDotRef = useRef<HTMLDivElement>(null);
   const cursorOutlineRef = useRef<HTMLDivElement>(null);
 

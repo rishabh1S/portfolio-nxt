@@ -8,7 +8,7 @@ const Messages: React.FC<Message> = ({ content, isUser }) => {
     >
       {!isUser && (
         <div
-          className={`rounded-full p-3 bg-zinc-400 dark:bg-zinc-800 border-2 border-violet-700`}
+          className={`rounded-full p-2 sm:p-3 bg-zinc-400 dark:bg-zinc-800 border-2 border-violet-700`}
         >
           <svg
             className="w-8 h-8 fill-current"
@@ -21,7 +21,7 @@ const Messages: React.FC<Message> = ({ content, isUser }) => {
         </div>
       )}
       <span
-        className={`p-3.5 text-xl ${
+        className={`p-2.5 sm:p-3.5 text-base sm:text-xl ${
           isUser
             ? "bg-zinc-300 dark:bg-zinc-600 rounded-l-full rounded-br-full"
             : ""

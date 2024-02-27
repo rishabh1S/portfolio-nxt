@@ -3,9 +3,9 @@ import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.share
 import { SetStateAction } from "react";
 
 const questions = [
-  "Hi there! To get started, could you tell me your full name?",
-  `Nice to meet you! Could you share your email address?`,
-  `Great, Leave any message you want to convey?`,
+  "Hello! To begin, may I have your full name, please?",
+  "Nice to meet you! Could you kindly provide your email address?",
+  "Excellent! Is there anything specific you'd like to share or convey at this moment?",
 ];
 
 const isInvalidKeyEvent = (
