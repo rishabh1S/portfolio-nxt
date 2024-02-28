@@ -33,11 +33,12 @@ export const fadeInAnimationVariantsY = {
     opacity: 0,
     y: 100,
   },
-  animate: () => ({
+  animate: (isUser: boolean) => ({
     opacity: 1,
     y: 0,
     transition: {
       duration: 0.8,
+      delay: isUser ? 0 : 0.5,
       ease: "easeInOut",
     },
   }),

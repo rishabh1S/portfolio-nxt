@@ -20,8 +20,10 @@ export default function Resume() {
               pageNumber={1}
               scale={isMobile ? 0.6 : 1.2}
               onClick={(e) => {
-                window.open(e.target.href, "_blank");
-                e.preventDefault();
+                if (e.target.tagName.toLowerCase() === "a") {
+                  window.open(e.target.href, "_blank");
+                  e.preventDefault();
+                }
               }}
             />
           </Document>

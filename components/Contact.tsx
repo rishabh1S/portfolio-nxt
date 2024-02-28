@@ -30,21 +30,25 @@ const Contact = () => {
               projects or just want to have a casual chat.
             </h2>
           </motion.div>
-          <motion.button
+          <motion.div
             variants={fadeInAnimationVariantsY}
             initial="initial"
             whileInView="animate"
             viewport={{
               once: true,
             }}
-            onClick={() => router.push("/contact")}
-            className="flex justify-center items-center gap-5 sm:mx-48 py-2 sm:py-8 rounded-full border border-black dark:border-white hover:bg-black/[0.2] dark:hover:bg-white/[0.2] transition-all ease-in-out"
+            className="sm:mx-48"
           >
-            <h1 className="text-xl sm:text-4xl uppercase tracking-tighter">
-              Let’s connect
-            </h1>
-            <MdArrowOutward size={48} />
-          </motion.button>
+            <button
+              onClick={() => router.push("/contact")}
+              className="flex justify-center items-center w-full gap-5 py-2 sm:py-8 rounded-full border border-black dark:border-white hover:bg-black/[0.2] dark:hover:bg-white/[0.2] transition-all ease-in-out"
+            >
+              <h1 className="text-xl sm:text-4xl uppercase tracking-tighter">
+                Let’s connect
+              </h1>
+              <MdArrowOutward size={48} />
+            </button>
+          </motion.div>
         </div>
       </div>
     </div>

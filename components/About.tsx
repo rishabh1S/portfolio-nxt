@@ -18,7 +18,7 @@ const About = () => {
   const router = useRouter();
   return (
     <div className="min-h-screen w-screen overflow-hidden">
-      <div className="py-16 sm:px-48 px-4">
+      <div className="py-16 sm:px-48 px-4 flex flex-col gap-20">
         <div className="flex flex-col gap-8 sm:gap-20">
           <motion.h1
             variants={fadeInAnimationVariantsXl}
@@ -60,21 +60,25 @@ const About = () => {
               and pop music.
             </h2>
           </motion.div>
-          <motion.button
+          <motion.div
             variants={fadeInAnimationVariantsY}
             initial="initial"
             whileInView="animate"
             viewport={{
               once: true,
             }}
-            onClick={() => router.push("/resume")}
-            className="flex sm:self-end gap-3 items-center justify-center sm:w-fit h-fit py-4 px-6 rounded-full border border-black dark:border-white hover:bg-black/[0.2] dark:hover:bg-white/[0.2] transition-all ease-in-out"
+            className="sm:self-end"
           >
-            <h1 className="text-xl sm:text-2xl tracking-tighter uppercase">
-              Grab my Resume
-            </h1>
-            <MdArrowOutward size={28} />
-          </motion.button>
+            <button
+              onClick={() => router.push("/resume")}
+              className="flex gap-3 items-center justify-center sm:w-fit h-fit py-4 px-6 rounded-full border border-black dark:border-white hover:bg-black/[0.2] dark:hover:bg-white/[0.2] transition-all ease-in-out"
+            >
+              <h1 className="text-xl sm:text-2xl tracking-tighter uppercase">
+                Grab my Resume
+              </h1>
+              <MdArrowOutward size={28} />
+            </button>
+          </motion.div>
         </div>
         <Skills />
       </div>

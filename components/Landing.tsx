@@ -38,21 +38,25 @@ const Landing = () => {
           </h1>
         </motion.div>
         <div className="flex sm:flex-row flex-col-reverse gap-6 justify-between">
-          <motion.button
+          <motion.div
             variants={fadeInAnimationVariantsXl}
             initial="initial"
             whileInView="animate"
             viewport={{
               once: true,
             }}
-            onClick={() => router.push("/contact")}
-            className="flex sm:self-end gap-3 items-center justify-center sm:w-fit h-fit py-4 px-6 rounded-full border border-black dark:border-white uppercase hover:bg-black/[0.2] dark:hover:bg-white/[0.2] transition-all ease-in-out"
+            className="sm:self-end"
           >
-            <h1 className="text-xl sm:text-2xl tracking-tighter uppercase">
-              Let’s connect
-            </h1>
-            <MdArrowOutward size={28} />
-          </motion.button>
+            <button
+              onClick={() => router.push("/contact")}
+              className="flex gap-3 items-center justify-center sm:w-fit h-fit py-4 px-6 rounded-full border border-black dark:border-white uppercase hover:bg-black/[0.2] dark:hover:bg-white/[0.2] transition-all ease-in-out"
+            >
+              <h1 className="text-xl sm:text-2xl tracking-tighter uppercase">
+                Let’s connect
+              </h1>
+              <MdArrowOutward size={28} />
+            </button>
+          </motion.div>
           <motion.h2
             variants={fadeInAnimationVariantsXr}
             initial="initial"

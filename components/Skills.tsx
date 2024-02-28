@@ -42,9 +42,9 @@ const Skills = () => {
       viewport={{
         once: true,
       }}
-      className="pt-16 sm:px-4"
+      className="sm:px-4"
     >
-      <motion.div className="flex flex-col gap-4 py-4">
+      <div className="flex flex-col gap-4 py-4">
         <h1 className="sm:text-7xl text-4xl font-medium tracking-tighter">
           Tech Stack
         </h1>
@@ -54,7 +54,7 @@ const Skills = () => {
           subsequently leverage my knowledge to create innovative solutions,
           determining my proficiency in the process.
         </h2>
-      </motion.div>
+      </div>
       <div className="flex flex-col gap-4 pt-4">
         <SkillSection
           title="Mobile Development"

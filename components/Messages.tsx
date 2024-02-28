@@ -1,10 +1,21 @@
+"use client";
+
+import { fadeInAnimationVariantsY } from "@/utils/framer-animations";
 import { Message } from "@/utils/types";
+import { motion } from "framer-motion";
 import React from "react";
 
 const Messages: React.FC<Message> = ({ content, isUser }) => {
   return (
-    <div
+    <motion.div
+      variants={fadeInAnimationVariantsY}
+      initial="initial"
+      whileInView="animate"
+      viewport={{
+        once: true,
+      }}
       className={`flex items-center my-2 ${isUser ? "self-end" : "self-start"}`}
+      custom={isUser}
     >
       {!isUser && (
         <div
@@ -29,7 +40,7 @@ const Messages: React.FC<Message> = ({ content, isUser }) => {
       >
         {content}
       </span>
-    </div>
+    </motion.div>
   );
 };
 
