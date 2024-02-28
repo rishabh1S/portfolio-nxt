@@ -4,11 +4,12 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useRef } from "react";
 import { MdArrowOutward } from "react-icons/md";
 const VideoPlayer = dynamic(() => import("./VideoPlayer"), {
   ssr: false,
 });
+import { motion, useScroll, useTransform } from "framer-motion";
 
 interface ProjectCardProps {
   number: string;
@@ -32,9 +33,22 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   isAlternate,
 }) => {
   const isMobile = useMediaQuery(640);
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.33 1"],
+  });
+
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   return (
-    <div
+    <motion.div
+      ref={ref}
+      style={{
+        scale: scaleProgress,
+        opacity: opacityProgress,
+      }}
       className={`sm:max-w-4xl flex sm:flex-row flex-col ${
         isAlternate ? "ml-auto" : "mr-auto"
       }`}
@@ -81,7 +95,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

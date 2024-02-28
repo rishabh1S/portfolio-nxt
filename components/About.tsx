@@ -1,9 +1,12 @@
 "use client";
 
-import React from "react";
-import { Skills } from ".";
+import { Orbitron } from "next/font/google";
 import { useRouter } from "next/navigation";
 import { MdArrowOutward } from "react-icons/md";
+import { Skills } from ".";
+import { ParallaxText } from "./ui";
+
+const orbitron = Orbitron({ subsets: ["latin"] });
 
 const About = () => {
   const router = useRouter();
@@ -46,6 +49,20 @@ const About = () => {
           </button>
         </div>
         <Skills />
+      </div>
+      <div className="min-h-fit py-12 flex flex-col gap-10">
+        <ParallaxText
+          className={`${orbitron.className} text-6xl`}
+          baseVelocity={-2}
+        >
+          Frontend Development App Development
+        </ParallaxText>
+        <ParallaxText
+          className={`${orbitron.className} text-6xl`}
+          baseVelocity={2}
+        >
+          UI/UX Fullstack Development
+        </ParallaxText>
       </div>
     </div>
   );

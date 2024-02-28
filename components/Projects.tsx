@@ -13,7 +13,7 @@ const Projects = () => {
         <h1 className="sm:text-7xl text-4xl font-medium tracking-tighter">
           My latest projects
         </h1>
-        <div className="py-8 sm:py-14 flex flex-col gap-10 sm:gap-20">
+        <div className="relative py-8 sm:py-14 flex flex-col gap-10 sm:gap-20">
           {projectsData.slice(0, 5).map((project, index) => (
             <ProjectCard
               key={project.number}
