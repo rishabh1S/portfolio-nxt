@@ -10,6 +10,7 @@ import Projects from "./Projects";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Topbar from "./Topbar";
+import SkillSection from "./SkillSection";
 import Skills from "./Skills";
 import Footer from "./Footer";
 import VideoPlayer from "./VideoPlayer";
@@ -26,6 +27,7 @@ export {
   ProjectItem,
   Projects,
   MenuMobile,
+  SkillSection,
   Skills,
   Header,
   Sidebar,

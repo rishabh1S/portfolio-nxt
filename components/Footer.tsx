@@ -1,4 +1,11 @@
+"use client";
+
+import {
+  fadeInAnimationVariantsXl,
+  fadeInAnimationVariantsXr,
+} from "@/utils/framer-animations";
 import { SocialIcons } from "@/utils/socials";
+import { motion } from "framer-motion";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import React from "react";
@@ -12,17 +19,31 @@ const Footer = () => {
         <div className="sm:grid grid-cols-2 grid-rows-1 flex flex-col-reverse gap-8 sm:gap-4">
           <div className="flex">
             <div className="sm:w-1/4" />
-            <div
+            <motion.div
+              variants={fadeInAnimationVariantsXl}
+              initial="initial"
+              whileInView="animate"
+              viewport={{
+                once: true,
+              }}
               className={`${inter.className} tracking-tighter sm:w-3/4 w-full flex flex-col text-neutral-600 dark:text-neutral-400 font-light text-xs sm:text-sm text-center sm:items-start break-words`}
             >
               <h2 className="h-1/2">{`© ${new Date().getFullYear()} Rishabh Singh, All Rights Reserved`}</h2>
               <h2 className="h-1/2">
                 Passionate enthusiast of Next.js, Expo and modern development.
               </h2>
-            </div>
+            </motion.div>
           </div>
           <div className="flex flex-col items-center sm:items-end">
-            <div className="h-1/2 flex justify-end items-center gap-5 sm:gap-8 sm:mr-28">
+            <motion.div
+              variants={fadeInAnimationVariantsXr}
+              initial="initial"
+              whileInView="animate"
+              viewport={{
+                once: true,
+              }}
+              className="h-1/2 flex justify-end items-center gap-5 sm:gap-8 sm:mr-28"
+            >
               {SocialIcons.map((SocialIcon, index) => (
                 <Link
                   key={index}
@@ -33,7 +54,7 @@ const Footer = () => {
                   <SocialIcon.icon size={22} />
                 </Link>
               ))}
-            </div>
+            </motion.div>
             <div className="h-1/2" />
           </div>
         </div>

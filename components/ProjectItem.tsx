@@ -30,12 +30,12 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
   const [isVisible, setIsVisible] = useState(false);
   return (
     <div
-      className="relative border-b border-zinc-300 dark:border-zinc-700 sm:py-12 py-6 sm:pr-2"
+      className="relative border-b border-zinc-300 dark:border-zinc-700 sm:py-12 py-6 sm:pr-2 group"
       onMouseEnter={!isMobile ? () => setIsVisible(true) : undefined}
       onMouseLeave={!isMobile ? () => setIsVisible(false) : undefined}
     >
       <div className="flex sm:flex-row flex-col justify-between sm:items-center sm:px-4 gap-4">
-        <h1 className="text-4xl font-bold tracking-tighter hover:text-violet-700">
+        <h1 className="text-4xl font-bold tracking-tighter group-hover:text-violet-700 transition-transform ease-in-out duration-300 group-hover:translate-x-4">
           {title}
         </h1>
         <h3 className="text-neutral-600 dark:text-neutral-400 sm:text-lg text-sm">
@@ -66,7 +66,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
                 videoUrl={videoUrl}
                 width={450}
                 height={250}
-                className="transition duration-300 transform hover:scale-105"
+                className="transition !duration-500 !delay-300 transform hover:scale-95"
               />
             ) : (
               <Image
@@ -74,7 +74,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
                 alt="Project card"
                 width={450}
                 height={300}
-                className="transition duration-300 transform hover:scale-105"
+                className="transition !duration-500 !delay-300 transform hover:scale-95"
               />
             )}
           </Link>

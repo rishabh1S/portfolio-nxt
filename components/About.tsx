@@ -5,6 +5,12 @@ import { useRouter } from "next/navigation";
 import { MdArrowOutward } from "react-icons/md";
 import { Skills } from ".";
 import { ParallaxText } from "./ui";
+import { motion } from "framer-motion";
+import {
+  fadeInAnimationVariantsXl,
+  fadeInAnimationVariantsXr,
+  fadeInAnimationVariantsY,
+} from "@/utils/framer-animations";
 
 const orbitron = Orbitron({ subsets: ["latin"] });
 
@@ -14,10 +20,26 @@ const About = () => {
     <div className="min-h-screen w-screen overflow-hidden">
       <div className="py-16 sm:px-48 px-4">
         <div className="flex flex-col gap-8 sm:gap-20">
-          <h1 className="sm:text-7xl text-[32px] font-medium tracking-tighter sm:px-4">
+          <motion.h1
+            variants={fadeInAnimationVariantsXl}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
+            className="sm:text-7xl text-[32px] font-medium tracking-tighter sm:px-4"
+          >
             ‘Every great design begins with an even better story’
-          </h1>
-          <div className="sm:w-4/5 self-end text-xl flex flex-col gap-3 text-justify">
+          </motion.h1>
+          <motion.div
+            variants={fadeInAnimationVariantsXr}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
+            className="sm:w-4/5 self-end text-xl flex flex-col gap-3 text-justify"
+          >
             <h2 className="text-base sm:text-xl">
               I’m Rishabh Singh, a web developer fueled by a genuine passion for
               full-stack web development and design. I earned my Bachelor’s
@@ -37,8 +59,14 @@ const About = () => {
               coding, you’ll likely catch me enjoying the beats of modern rock
               and pop music.
             </h2>
-          </div>
-          <button
+          </motion.div>
+          <motion.button
+            variants={fadeInAnimationVariantsY}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
             onClick={() => router.push("/resume")}
             className="flex sm:self-end gap-3 items-center justify-center sm:w-fit h-fit py-4 px-6 rounded-full border border-black dark:border-white hover:bg-black/[0.2] dark:hover:bg-white/[0.2] transition-all ease-in-out"
           >
@@ -46,19 +74,19 @@ const About = () => {
               Grab my Resume
             </h1>
             <MdArrowOutward size={28} />
-          </button>
+          </motion.button>
         </div>
         <Skills />
       </div>
-      <div className="min-h-fit py-12 flex flex-col gap-10">
+      <div className="min-h-fit sm:py-12 py-6 flex flex-col sm:gap-10 gap-6">
         <ParallaxText
-          className={`${orbitron.className} text-6xl`}
+          className={`${orbitron.className} sm:text-6xl text-3xl`}
           baseVelocity={-2}
         >
           Frontend Development App Development
         </ParallaxText>
         <ParallaxText
-          className={`${orbitron.className} text-6xl`}
+          className={`${orbitron.className} sm:text-6xl text-3xl`}
           baseVelocity={2}
         >
           UI/UX Fullstack Development

@@ -1,4 +1,5 @@
-import Image from "next/image";
+"use client";
+
 import React from "react";
 import { FaJava } from "react-icons/fa";
 import {
@@ -28,59 +29,22 @@ import {
   SiTypescript,
 } from "react-icons/si";
 import { TbApi, TbBrandReactNative } from "react-icons/tb";
-import { Button } from "./ui";
-
-const Skill: React.FC<{
-  Icon?: React.ElementType;
-  logo?: string;
-  name: string;
-}> = ({ Icon, logo, name }) => {
-  return (
-    <Button className="flex items-center justify-center gap-3">
-      <h2 className="font-medium text-sm tracking-tighter sm:inline hidden">
-        {name}
-      </h2>
-      {Icon && <Icon size={22} />}
-      {logo && (
-        <Image
-          src={logo}
-          alt="Logo"
-          height={22}
-          width={22}
-          className="rounded-md"
-        />
-      )}
-    </Button>
-  );
-};
-
-const SkillSection: React.FC<{
-  title: string;
-  skills: { Icon?: React.ElementType; name: string; logo?: string }[];
-}> = ({ title, skills }) => {
-  return (
-    <div className="flex flex-col gap-3">
-      <h1 className="text-sm tracking-tight text-zinc-600 dark:text-zinc-400">
-        {title}
-      </h1>
-      <div className="flex flex-wrap gap-4">
-        {skills.map((skill, index) => (
-          <Skill
-            key={index}
-            Icon={skill.Icon}
-            logo={skill.logo}
-            name={skill.name}
-          />
-        ))}
-      </div>
-    </div>
-  );
-};
+import { SkillSection } from ".";
+import { motion } from "framer-motion";
+import { fadeInAnimationVariantsY } from "@/utils/framer-animations";
 
 const Skills = () => {
   return (
-    <div className="pt-16 sm:px-4">
-      <div className="flex flex-col gap-4 py-4">
+    <motion.div
+      variants={fadeInAnimationVariantsY}
+      initial="initial"
+      whileInView="animate"
+      viewport={{
+        once: true,
+      }}
+      className="pt-16 sm:px-4"
+    >
+      <motion.div className="flex flex-col gap-4 py-4">
         <h1 className="sm:text-7xl text-4xl font-medium tracking-tighter">
           Tech Stack
         </h1>
@@ -90,7 +54,7 @@ const Skills = () => {
           subsequently leverage my knowledge to create innovative solutions,
           determining my proficiency in the process.
         </h2>
-      </div>
+      </motion.div>
       <div className="flex flex-col gap-4 pt-4">
         <SkillSection
           title="Mobile Development"
@@ -151,7 +115,7 @@ const Skills = () => {
           ]}
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 
