@@ -1,4 +1,4 @@
 import { WavyBackground } from "./wavy-background";
-import { Button } from "./moving-border";
+import { Button } from "./Button";
 
 export { WavyBackground, Button };

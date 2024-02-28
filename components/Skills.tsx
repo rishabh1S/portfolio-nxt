@@ -36,10 +36,7 @@ const Skill: React.FC<{
   name: string;
 }> = ({ Icon, logo, name }) => {
   return (
-    <Button
-      borderRadius="1.75rem"
-      className="bg-white dark:bg-slate-900 border-neutral-200 dark:border-slate-800"
-    >
+    <Button className="flex items-center justify-center gap-3">
       <h2 className="font-medium text-sm tracking-tighter sm:inline hidden">
         {name}
       </h2>
