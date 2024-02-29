@@ -8,17 +8,17 @@ export const animatePageIn = () => {
     const tl = gsap.timeline();
 
     tl.set(transitionElement, {
-      xPercent: 0,
+      yPercent: 0,
     })
       .to(transitionElement, {
-        xPercent: 100,
+        yPercent: 100,
         duration: 0.6,
       })
       .to(
         transitionElement,
         {
-          borderTopLeftRadius: "30vh",
-          borderBottomLeftRadius: "30vh",
+          borderTopLeftRadius: "50vh",
+          borderTopRightRadius: "50vh",
           duration: 0.4,
         },
         "<"
@@ -37,14 +37,14 @@ export const animatePageOut = (
     const tl = gsap.timeline();
 
     tl.set(animationWrapper, {
-      xPercent: -100,
-      borderTopRightRadius: "30vh",
-      borderBottomRightRadius: "30vh",
-      borderTopLeftRadius: "0",
+      yPercent: -100,
+      borderTopRightRadius: "50vh",
+      borderBottomRightRadius: "0",
+      borderTopLeftRadius: "50vh",
       borderBottomLeftRadius: "0",
     })
       .to(animationWrapper, {
-        xPercent: 0,
+        yPercent: 0,
         duration: 0.6,
         onComplete: () => {
           if (additional) {
@@ -57,7 +57,7 @@ export const animatePageOut = (
         animationWrapper,
         {
           borderTopRightRadius: "0",
-          borderBottomRightRadius: "0",
+          borderTopLeftRadius: "0",
           duration: 0.4,
         },
         "<"

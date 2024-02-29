@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./provider";
 import { CustomCursor, Header } from "@/components";
+import NextTopLoader from "nextjs-toploader";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
         <Providers>
           <CustomCursor />
           <Header />
+          <NextTopLoader showSpinner={false} color="#8b5cf6" zIndex={999} />
           {children}
         </Providers>
       </body>
