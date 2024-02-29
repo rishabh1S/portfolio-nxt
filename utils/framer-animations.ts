@@ -1,4 +1,4 @@
-export const fadeInAnimationVariantsXl = {
+const fadeInAnimationVariantsXl = {
   initial: {
     opacity: 0,
     x: -100,
@@ -13,7 +13,7 @@ export const fadeInAnimationVariantsXl = {
   }),
 };
 
-export const fadeInAnimationVariantsXr = {
+const fadeInAnimationVariantsXr = {
   initial: {
     opacity: 0,
     x: 100,
@@ -28,7 +28,7 @@ export const fadeInAnimationVariantsXr = {
   }),
 };
 
-export const fadeInAnimationVariantsY = {
+const fadeInAnimationVariantsY = {
   initial: {
     opacity: 0,
     y: 100,
@@ -43,7 +43,7 @@ export const fadeInAnimationVariantsY = {
   }),
 };
 
-export const fadeInAnimationChat = {
+const fadeInAnimationChat = {
   initial: {
     opacity: 0,
     y: 100,
@@ -59,7 +59,7 @@ export const fadeInAnimationChat = {
   }),
 };
 
-export const fadeInAnimationVariantsSkill = {
+const fadeInAnimationVariantsSkill = {
   initial: {
     opacity: 0,
     y: 100,
@@ -72,4 +72,12 @@ export const fadeInAnimationVariantsSkill = {
       ease: "easeInOut",
     },
   }),
+};
+
+export {
+  fadeInAnimationVariantsXl,
+  fadeInAnimationVariantsXr,
+  fadeInAnimationVariantsY,
+  fadeInAnimationChat,
+  fadeInAnimationVariantsSkill,
 };

@@ -1,9 +1,8 @@
 "use client";
 
 import { Orbitron } from "next/font/google";
-import { useRouter } from "next/navigation";
 import { MdArrowOutward } from "react-icons/md";
-import { Skills } from ".";
+import { Skills, TransitionButton } from ".";
 import { ParallaxText } from "./ui";
 import { motion } from "framer-motion";
 import {
@@ -15,7 +14,6 @@ import {
 const orbitron = Orbitron({ subsets: ["latin"] });
 
 const About = () => {
-  const router = useRouter();
   return (
     <div className="min-h-screen w-screen overflow-hidden">
       <div className="py-16 sm:px-48 px-4 flex flex-col gap-20">
@@ -69,15 +67,15 @@ const About = () => {
             }}
             className="sm:self-end"
           >
-            <button
-              onClick={() => router.push("/resume")}
+            <TransitionButton
+              href="/resume"
               className="flex gap-3 items-center justify-center sm:w-fit h-fit py-4 px-6 rounded-full border border-black dark:border-white hover:bg-black/[0.2] dark:hover:bg-white/[0.2] transition-all ease-in-out"
             >
               <h1 className="text-xl sm:text-2xl tracking-tighter uppercase">
                 Grab my Resume
               </h1>
               <MdArrowOutward size={28} />
-            </button>
+            </TransitionButton>
           </motion.div>
         </div>
         <Skills />

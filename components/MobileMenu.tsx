@@ -1,13 +1,13 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { TransitionButton } from ".";
 interface MenuMobileProps {
   setMenuOpen: (show: boolean) => void;
 }
 
-const MenuMobile: React.FC<MenuMobileProps> = ({ setMenuOpen }) => {
+const MobileMenu: React.FC<MenuMobileProps> = ({ setMenuOpen }) => {
   const router = useRouter();
-
   return (
     <div className="z-30 fixed top-20 h-full w-full backdrop-blur-2xl overflow-hidden">
       <div className="mt-32">
@@ -21,39 +21,39 @@ const MenuMobile: React.FC<MenuMobileProps> = ({ setMenuOpen }) => {
           >
             About
           </button>
-          <button
+          <TransitionButton
+            href="/projects"
             className="uppercase text-4xl font-bold tracking-tighter hover:text-violet-700"
-            onClick={() => {
-              router.push("/#projects");
+            additional={() => {
               setMenuOpen(false);
             }}
           >
             Projects
-          </button>
-          <button
+          </TransitionButton>
+          <TransitionButton
+            href="/resume"
             className="uppercase text-4xl font-bold tracking-tighter hover:text-violet-700"
-            onClick={() => {
-              router.push("/resume");
+            additional={() => {
               setMenuOpen(false);
             }}
           >
             Resume
-          </button>
-          <button
+          </TransitionButton>
+          <TransitionButton
+            href="/contact"
             className="flex items-center justify-center rounded hover:text-violet-700"
-            onClick={() => {
-              router.push("/contact");
+            additional={() => {
               setMenuOpen(false);
             }}
           >
             <h1 className="uppercase text-4xl font-bold tracking-tighter">
               Contact me
             </h1>
-          </button>
+          </TransitionButton>
         </div>
       </div>
     </div>
   );
 };
 
-export default MenuMobile;
+export default MobileMenu;

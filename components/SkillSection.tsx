@@ -18,7 +18,7 @@ const SkillSection: React.FC<{
         {skills.map(({ name, Icon, logo }, index) => (
           <motion.li
             key={index}
-            className="px-3 sm:px-4 py-3 rounded-full border border-slate-400 dark:border-slate-800 bg-[linear-gradient(110deg,#94a3b8,45%,#e2e8f0,55%,#94a3b8)] dark:bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] transition-colors focus:outline-none flex items-center justify-center gap-3"
+            className="px-3 sm:px-4 py-3 rounded-full border border-slate-400 dark:border-slate-800 bg-[linear-gradient(110deg,#94a3b8,45%,#e2e8f0,55%,#94a3b8)] dark:bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] focus:outline-none flex items-center justify-center gap-3"
             variants={fadeInAnimationVariantsSkill}
             initial="initial"
             whileInView="animate"

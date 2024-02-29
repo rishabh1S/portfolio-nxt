@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ProjectCard } from ".";
+import { ProjectCard, TransitionButton } from ".";
 import { useRouter } from "next/navigation";
 import { projectsData } from "@/utils/projects";
 
@@ -30,12 +30,12 @@ const Projects = () => {
         </div>
         <div className="flex justify-center">
           <div className="relative group">
-            <button
-              onClick={() => router.push("/projects")}
+            <TransitionButton
+              href="/projects"
               className="relative z-10 px-3 uppercase text-center tracking-tight bg-[#F8EEEC] dark:bg-[#0E0C0A]"
             >
               View All Projects
-            </button>
+            </TransitionButton>
             <span className="absolute top-3 -left-24 w-60 border-t-[1.5px] border-solid border-violet-700 transform transition-transform !duration-700 origin-left group-hover:translate-x-32" />
           </div>
         </div>

@@ -14,7 +14,8 @@ import SkillSection from "./SkillSection";
 import Skills from "./Skills";
 import Footer from "./Footer";
 import VideoPlayer from "./VideoPlayer";
-import MenuMobile from "./MenuMobile";
+import MobileMenu from "./MobileMenu";
+import TransitionButton from "./TransitionButton";
 
 export {
   About,
@@ -26,7 +27,7 @@ export {
   ProjectCard,
   ProjectItem,
   Projects,
-  MenuMobile,
+  MobileMenu,
   SkillSection,
   Skills,
   Header,
@@ -34,4 +35,5 @@ export {
   Topbar,
   Footer,
   VideoPlayer,
+  TransitionButton,
 };

@@ -7,7 +7,7 @@ import { MdSunny } from "react-icons/md";
 import { Howl } from "howler";
 import { useEffect, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { MenuMobile } from ".";
+import { MobileMenu } from ".";
 import { useRouter } from "next/navigation";
 
 const Topbar = () => {
@@ -65,7 +65,7 @@ const Topbar = () => {
           </div>
         </div>
       </div>
-      {menuOpen && <MenuMobile setMenuOpen={setMenuOpen} />}
+      {menuOpen && <MobileMenu setMenuOpen={setMenuOpen} />}
     </>
   );
 };

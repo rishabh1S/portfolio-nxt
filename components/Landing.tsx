@@ -1,7 +1,6 @@
 "use client";
 
 import { Caveat } from "next/font/google";
-import { useRouter } from "next/navigation";
 import { MdArrowOutward } from "react-icons/md";
 import { WavyBackground } from "./ui";
 import { motion } from "framer-motion";
@@ -10,15 +9,15 @@ import {
   fadeInAnimationVariantsXr,
   fadeInAnimationVariantsY,
 } from "@/utils/framer-animations";
+import { TransitionButton } from ".";
 
 const caveat = Caveat({ subsets: ["latin"] });
 
 const Landing = () => {
-  const router = useRouter();
   return (
     <div className="w-screen overflow-hidden">
       <WavyBackground />
-      <div className="pt-44 sm:pt-32 py-16 sm:pl-48 px-4 flex flex-col gap-8 sm:gap-14">
+      <div className="pt-44 sm:pt-28 py-16 sm:pl-48 px-4 flex flex-col gap-8 sm:gap-14">
         <motion.div
           variants={fadeInAnimationVariantsY}
           initial="initial"
@@ -47,15 +46,15 @@ const Landing = () => {
             }}
             className="sm:self-end"
           >
-            <button
-              onClick={() => router.push("/contact")}
+            <TransitionButton
+              href="/contact"
               className="flex gap-3 items-center justify-center sm:w-fit h-fit py-4 px-6 rounded-full border border-black dark:border-white uppercase hover:bg-black/[0.2] dark:hover:bg-white/[0.2] transition-all ease-in-out"
             >
               <h1 className="text-xl sm:text-2xl tracking-tighter uppercase">
                 Let’s connect
               </h1>
               <MdArrowOutward size={28} />
-            </button>
+            </TransitionButton>
           </motion.div>
           <motion.h2
             variants={fadeInAnimationVariantsXr}

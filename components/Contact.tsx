@@ -2,12 +2,11 @@
 
 import { fadeInAnimationVariantsY } from "@/utils/framer-animations";
 import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
 import React from "react";
 import { MdArrowOutward } from "react-icons/md";
+import { TransitionButton } from ".";
 
 const Contact = () => {
-  const router = useRouter();
   return (
     <div className="w-screen overflow-hidden">
       <div className="sm:py-28 py-16 sm:pl-20 px-4">
@@ -39,15 +38,15 @@ const Contact = () => {
             }}
             className="sm:mx-48"
           >
-            <button
-              onClick={() => router.push("/contact")}
+            <TransitionButton
+              href="/contact"
               className="flex justify-center items-center w-full gap-5 py-2 sm:py-8 rounded-full border border-black dark:border-white hover:bg-black/[0.2] dark:hover:bg-white/[0.2] transition-all ease-in-out"
             >
               <h1 className="text-xl sm:text-4xl uppercase tracking-tighter">
                 Let’s connect
               </h1>
               <MdArrowOutward size={48} />
-            </button>
+            </TransitionButton>
           </motion.div>
         </div>
       </div>
