@@ -1,6 +1,6 @@
 "use client";
 
-import { fadeInAnimationVariantsY } from "@/utils/framer-animations";
+import { fadeInAnimationChat } from "@/utils/framer-animations";
 import { Message } from "@/utils/types";
 import { motion } from "framer-motion";
 import React from "react";
@@ -8,7 +8,7 @@ import React from "react";
 const Messages: React.FC<Message> = ({ content, isUser }) => {
   return (
     <motion.div
-      variants={fadeInAnimationVariantsY}
+      variants={fadeInAnimationChat}
       initial="initial"
       whileInView="animate"
       viewport={{

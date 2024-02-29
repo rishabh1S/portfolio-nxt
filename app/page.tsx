@@ -4,14 +4,18 @@ import React from "react";
 export default function Home() {
   return (
     <main>
-      <Landing />
+      <div id="home">
+        <Landing />
+      </div>
       <div id="about">
         <About />
       </div>
       <div id="projects">
         <Projects />
       </div>
-      <Contact />
+      <div id="contact">
+        <Contact />
+      </div>
       <Footer />
     </main>
   );
