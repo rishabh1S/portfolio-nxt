@@ -11,6 +11,7 @@
   "dependencies": {
     "@emailjs/browser": "^4.1.0",
     "@motionone/utils": "^10.17.0",
+    "@vercel/analytics": "^1.2.2",
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.6",
     "gsap": "^3.12.5",

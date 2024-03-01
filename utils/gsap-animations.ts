@@ -17,8 +17,8 @@ export const animatePageIn = () => {
       .to(
         transitionElement,
         {
-          borderTopLeftRadius: "50vh",
-          borderTopRightRadius: "50vh",
+          borderTopLeftRadius: "10vh",
+          borderTopRightRadius: "10vh",
           duration: 0.4,
         },
         "<"
@@ -38,9 +38,9 @@ export const animatePageOut = (
 
     tl.set(animationWrapper, {
       yPercent: -100,
-      borderTopRightRadius: "50vh",
+      borderTopRightRadius: "10vh",
       borderBottomRightRadius: "0",
-      borderTopLeftRadius: "50vh",
+      borderTopLeftRadius: "10vh",
       borderBottomLeftRadius: "0",
     })
       .to(animationWrapper, {
