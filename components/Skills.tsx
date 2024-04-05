@@ -22,6 +22,7 @@ import {
   SiPostman,
   SiPython,
   SiReact,
+  SiStorybook,
   SiStrapi,
   SiStripe,
   SiSupabase,
@@ -57,7 +58,7 @@ const Skills = () => {
       </div>
       <div className="flex flex-col gap-4 pt-4">
         <SkillSection
-          title="Mobile Development"
+          title="Native App Development"
           skills={[
             { Icon: TbBrandReactNative, name: "React native" },
             { Icon: SiExpo, name: "Expo" },
@@ -92,7 +93,6 @@ const Skills = () => {
             { Icon: FaJava, name: "Java" },
             { Icon: SiPython, name: "Python" },
             { Icon: TbApi, name: "Rest APIs" },
-            { Icon: SiGraphql, name: "GraphQl" },
           ]}
         />
         <SkillSection
@@ -112,6 +112,7 @@ const Skills = () => {
             { Icon: SiStripe, name: "Stripe" },
             { Icon: SiFigma, name: "Figma" },
             { Icon: SiPostman, name: "Postman" },
+            { Icon: SiStorybook, name: "Storybook" },
           ]}
         />
       </div>
