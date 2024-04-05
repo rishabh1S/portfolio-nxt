@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./provider";
-import { CustomCursor, Header } from "@/components";
-import NextTopLoader from "nextjs-toploader";
-import { Analytics } from "@vercel/analytics/react";
+import { Header } from "@/components";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -24,11 +22,8 @@ export default function RootLayout({
         className={`${montserrat.className} bg-[#F8EEEC] dark:bg-[#0E0C0A]`}
       >
         <Providers>
-          <CustomCursor />
           <Header />
-          <NextTopLoader showSpinner={false} color="#8b5cf6" zIndex={999} />
           {children}
-          <Analytics />
         </Providers>
       </body>
     </html>
