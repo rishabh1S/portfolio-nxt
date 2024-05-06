@@ -17,6 +17,7 @@ const Topbar = () => {
   const { theme, setTheme } = useTheme();
   const sound = new Howl({
     src: ["click.mp3"],
+    volume: 0.6,
   });
 
   useEffect(() => {
