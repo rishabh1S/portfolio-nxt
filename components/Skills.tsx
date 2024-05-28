@@ -8,10 +8,8 @@ import {
   SiCss3,
   SiExpo,
   SiExpress,
-  SiFigma,
   SiFirebase,
   SiGithub,
-  SiGraphql,
   SiHtml5,
   SiJavascript,
   SiMongodb,
@@ -22,7 +20,6 @@ import {
   SiPostman,
   SiPython,
   SiReact,
-  SiStorybook,
   SiStrapi,
   SiStripe,
   SiSupabase,
@@ -110,9 +107,7 @@ const Skills = () => {
             { Icon: SiGithub, name: "Github" },
             { Icon: SiStrapi, name: "Strapi" },
             { Icon: SiStripe, name: "Stripe" },
-            { Icon: SiFigma, name: "Figma" },
             { Icon: SiPostman, name: "Postman" },
-            { Icon: SiStorybook, name: "Storybook" },
           ]}
         />
       </div>
