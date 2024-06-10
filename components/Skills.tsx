@@ -25,6 +25,7 @@ import {
   SiSupabase,
   SiTailwindcss,
   SiTypescript,
+  SiShadcnui,
 } from "react-icons/si";
 import { TbApi, TbBrandReactNative } from "react-icons/tb";
 import { SkillSection } from ".";
@@ -78,6 +79,7 @@ const Skills = () => {
           skills={[
             { Icon: SiTailwindcss, name: "Tailwind CSS" },
             { Icon: SiBootstrap, name: "Bootstrap" },
+            { Icon: SiShadcnui, name: "ShadCn" },
             { Icon: SiNextui, name: "NextUI" },
             { logo: "/tamagui.jpg", name: "Tamagui.dev" },
           ]}
@@ -102,7 +104,7 @@ const Skills = () => {
           ]}
         />
         <SkillSection
-          title="Other Tools"
+          title="Others"
           skills={[
             { Icon: SiGithub, name: "Github" },
             { Icon: SiStrapi, name: "Strapi" },
