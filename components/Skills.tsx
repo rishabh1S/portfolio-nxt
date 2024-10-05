@@ -26,6 +26,10 @@ import {
   SiTailwindcss,
   SiTypescript,
   SiShadcnui,
+  SiSpringboot,
+  SiPostgresql,
+  SiDocker,
+  SiApachemaven,
 } from "react-icons/si";
 import { TbApi, TbBrandReactNative } from "react-icons/tb";
 import { SkillSection } from ".";
@@ -90,6 +94,7 @@ const Skills = () => {
             { Icon: SiNodedotjs, name: "Node.js" },
             { Icon: SiExpress, name: "Express.js" },
             { Icon: FaJava, name: "Java" },
+            { Icon: SiSpringboot, name: "SpringBoot" },
             { Icon: SiPython, name: "Python" },
             { Icon: TbApi, name: "Rest APIs" },
           ]}
@@ -99,17 +104,19 @@ const Skills = () => {
           skills={[
             { Icon: SiMongodb, name: "Mongo DB" },
             { Icon: SiMysql, name: "My SQL" },
+            { Icon: SiPostgresql, name: "PostgreSQL" },
             { Icon: SiFirebase, name: "Firebase" },
-            { Icon: SiSupabase, name: "Supabase" },
           ]}
         />
         <SkillSection
           title="Others"
           skills={[
             { Icon: SiGithub, name: "Github" },
+            { Icon: SiDocker, name: "Docker" },
             { Icon: SiStrapi, name: "Strapi" },
             { Icon: SiStripe, name: "Stripe" },
             { Icon: SiPostman, name: "Postman" },
+            { Icon: SiApachemaven, name: "Maven" },
           ]}
         />
       </div>

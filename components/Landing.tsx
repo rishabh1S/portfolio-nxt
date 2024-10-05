@@ -65,8 +65,8 @@ const Landing = () => {
             }}
             className="uppercase px-3 max-w-md text-sm sm:text-base text-justify"
           >
-            Crafting digital solutions with expertise in full stack Mern and
-            Mean development, as well as mobile app using React Native, learning
+            Crafting digital solutions with expertise in full stack Mern, Mean
+            development, as well as mobile app using React Native, learning
             UI/UX design.
           </motion.h2>
         </div>
