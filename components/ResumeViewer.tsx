@@ -7,7 +7,7 @@ import "react-pdf/dist/Page/TextLayer.css";
 import { HiOutlineDownload } from "react-icons/hi";
 import useMediaQuery from "@/hooks/useMediaQuery";
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
+pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 export default function ResumeViewer() {
   const isMobile = useMediaQuery(640);
