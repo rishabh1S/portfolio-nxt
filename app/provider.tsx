@@ -12,6 +12,7 @@ export const Providers: React.FC<{ children: React.ReactNode }> = ({
   return (
     <ThemeProvider
       attribute="class"
+      enableSystem={true}
       defaultTheme="dark"
       themes={["light", "dark"]}
     >

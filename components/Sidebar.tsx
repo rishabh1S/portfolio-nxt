@@ -41,7 +41,7 @@ const Sidebar = () => {
           className="flex items-center justify-center w-12 h-12 rounded hover:text-violet-700"
           href="/#about"
         >
-          <SiAboutdotme size={28} />
+          <SiAboutdotme size={48} />
         </Link>
         <Link
           className="flex items-center justify-center w-12 h-12 rounded hover:text-violet-700"
