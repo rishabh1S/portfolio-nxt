@@ -16,6 +16,7 @@ import Footer from "./Footer";
 import VideoPlayer from "./VideoPlayer";
 import MobileMenu from "./MobileMenu";
 import TransitionButton from "./TransitionButton";
+import ResumeViewer from "./ResumeViewer";
 
 export {
   About,
@@ -36,4 +37,5 @@ export {
   Footer,
   VideoPlayer,
   TransitionButton,
+  ResumeViewer
 };
